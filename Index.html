@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>React Tutorial 2</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        const rootElement = document.getElementById("root");
+        const content = "Hello World";
+        const myClassName = "container";
+        const props = {
+            className: "container",
+            children: "Hello world :)"
+        }
+        const element = (
+            <div {...props}></div>
+        );
+    ReactDOM.render(element, rootElement);
+    </script>
+</body>
+
+</html>
